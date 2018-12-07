@@ -3,7 +3,7 @@
 import socket
 import json
 import collections
-from solution import getSensorId, calculatePosition
+from solution import get_sensor_id, calculate_position
 
 SENSOR_IP = 'p.q.r.s'  # Config this later
 SENSOR_PORT = 9000
@@ -53,22 +53,22 @@ while True:
             line = line.replace(START, "")
             line = line.replace(END, "")
             sensor = json.loads(line)
-            sensorId = sensor["sensorId"]
+            sensor_id = sensor["sensorId"]
             beacons = sensor["beacons"]
 
-            if sensorId == getSensorId():
-                beaconList = []
+            if sensor_id == get_sensor_id():
+                beacon_list = []
                 for beacon in beacons:
-                    beaconList.insert(int(beacon["beaconId"]), beacon["rssi"])
-                print sensorId + ": ", beaconList
+                    beacon_list.insert(int(beacon["beaconId"]), beacon["rssi"])
+                print sensor_id + ": ", beacon_list
                 # print line
 
-                b1 = BeaconRSSI(beacon=BEACON1, rssi=beaconList[BEACON1.id])
-                b2 = BeaconRSSI(beacon=BEACON2, rssi=beaconList[BEACON2.id])
-                b3 = BeaconRSSI(beacon=BEACON3, rssi=beaconList[BEACON3.id])
-                b4 = BeaconRSSI(beacon=BEACON4, rssi=beaconList[BEACON4.id])
+                b1 = BeaconRSSI(beacon=BEACON1, rssi=beacon_list[BEACON1.id])
+                b2 = BeaconRSSI(beacon=BEACON2, rssi=beacon_list[BEACON2.id])
+                b3 = BeaconRSSI(beacon=BEACON3, rssi=beacon_list[BEACON3.id])
+                b4 = BeaconRSSI(beacon=BEACON4, rssi=beacon_list[BEACON4.id])
 
-                x, y, z = calculatePosition(b1, b2, b3, b4)
+                x, y, z = calculate_position(b1, b2, b3, b4)
 
                 x = int(x)
                 y = int(y)

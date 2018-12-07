@@ -4,7 +4,7 @@ import random
 
 
 # Return tag id ex '999-0000-00241234'
-def getSensorId():
+def get_sensor_id():
     return '999-0000-00238068'
 
 
