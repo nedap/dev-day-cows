@@ -8,26 +8,17 @@ def get_sensor_id():
     return '999-0000-00238068'
 
 
-# b.beacon
-# b.rssi
-# beacon.id
-# beacon.x
-# beacon.y
-# beacon.z
-# Return x,y,z
-def calculatePosition(b1, b2, b3, b4):
-    # What is b1, b2, b3, b4?
-    rssiOfB1 = b1.rssi
-    beaconInfoOfB2 = b2.beacon
-    xOfB2 = beaconInfoOfB2.x
-    # or
-    xOfB2 = b2.beacon.x
-
+# # What is b1, b2, b3, b4?
+# rssi_1 = b1.rssi
+# beacon_2 = b2.beacon
+# x_beacon_2 = beacon_2.x
+# # or
+# x_beacon_2 = b2.beacon.x
+def calculate_position(b1, b2, b3, b4):
     # Difficult math...
-    # max screen size 2000cm
-    x = random.random() * 2000
+    # If screen size were 2000cm...
+    x = random.random() * 2000  # Note: 100% accurate and deterministic
     y = 750
-    # z is not used anyway, but a nice to have
-    z = 0
+    z = 0  # z is not used anyway, but a nice to have
 
     return x, y, z
