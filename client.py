@@ -73,8 +73,9 @@ while True:
                 x = int(x)
                 y = int(y)
 
-                print "Sending position to mapper: " + str(x) + "," + str(y)
-                mapper.send(sensorId + "," + str(x) + "," + str(x) + "\n")
+                position = str(x) + "," + str(y)
+                print "Sending position to mapper: " + position
+                mapper.send(sensor_id + "," + position + "\n")
                 print "Position sent to mapper"
 
                 print "Wait for okay from mapper"
