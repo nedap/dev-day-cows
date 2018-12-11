@@ -23,7 +23,7 @@ def calculate_position(b1, b2, b3, b4):
     # Difficult math...
     # If screen size were 2000cm...
     x = random.random() * 2000  # Note: 100% accurate and deterministic
-    y = 750
+    y = random.random() * 2000  # Note: also 100% accurate and deterministic
     z = 0  # z is not used anyway, but a nice to have
 
     return x, y, z
