@@ -2,7 +2,7 @@
 
 Open this project in a Python editor, e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac).
 
-Fork this repo to work on the case.
+Configure a Python 2.7 interpreter.
 
 ## Running the client
 
