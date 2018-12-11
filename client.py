@@ -5,7 +5,7 @@ import json
 import collections
 from solution import get_sensor_id, calculate_position, get_team_name
 
-SENSOR_IP = 'p.q.r.s'  # Config this later
+SENSOR_IP = '192.168.88.254'  # Config this later
 SENSOR_PORT = 9000
 BUFFER_SIZE = 1024
 
