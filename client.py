@@ -3,7 +3,7 @@
 import socket
 import json
 import collections
-from solution import get_sensor_id, calculate_position
+from solution import get_sensor_id, calculate_position, get_team_name
 
 SENSOR_IP = 'p.q.r.s'  # Config this later
 SENSOR_PORT = 9000
@@ -75,7 +75,7 @@ while True:
 
                 position = str(x) + "," + str(y)
                 print "Sending position to mapper: " + position
-                mapper.send(sensor_id + "," + position + "\n")
+                mapper.send(get_team_name() + "," + position + "\n")
                 print "Position sent to mapper"
 
                 print "Wait for okay from mapper"

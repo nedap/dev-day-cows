@@ -8,6 +8,11 @@ def get_sensor_id():
     return '999-0000-00238068'
 
 
+# Your team name
+def get_team_name():
+    return get_sensor_id()
+
+
 # # What is b1, b2, b3, b4?
 # rssi_1 = b1.rssi
 # beacon_2 = b2.beacon
