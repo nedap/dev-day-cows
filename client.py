@@ -17,8 +17,8 @@ MAP_PORT = 8000
 
 Beacon = collections.namedtuple('Beacon', ['id', 'x', 'y', 'z'])
 BEACON1 = Beacon(id=13, x=2500, y=2000, z=0)
-BEACON2 = Beacon(id=11, x=1500, y=2000, z=0)
-BEACON3 = Beacon(id=7, x=1400, y=800, z=0)
+BEACON2 = Beacon(id=11, x=1450, y=2000, z=0)
+BEACON3 = Beacon(id=7, x=1500, y=800, z=0)
 BEACON4 = Beacon(id=9, x=2400, y=1200, z=0)
 
 BeaconRSSI = collections.namedtuple('BeaconWithRssi', ['beacon', 'rssi'])
